@@ -1,0 +1,35 @@
+﻿
+<div>
+
+
+    <button id="btn">ARATA</button>
+    <div id="emp">
+    </div>
+</div>
+
+@section scripts {
+<script>
+    var serviceUrl = 'https://localhost:5001/api/trains/getalltrains'; 
+
+      $('#btn').click(function(){
+
+        console.log("merge");
+        $.ajax({
+          type: 'GET',
+          contentType: "application/json",
+          url: 'https://localhost:5001/api/trains/getalltrains',
+          dataType: 'json',
+          success:function(data){
+            $.each(data, function(index, val){
+              emp.append('<li>' + val.rang + '</li>')
+               console.log("merge 1");
+            })
+          },
+          error:function(data){
+
+              console.log("nu merge");
+          }
+        })
+      });
+</script>
+}

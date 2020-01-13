@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Adauga Tren";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form>
+  <div class="form-group">
+    <label for="rang">Rang</label>
+    <input type="text" class="form-control" id="rang" name="rang" placeholder="Introdu rang">
+  </div>
+  <button type="submit" id="adauga" class="btn btn-primary">Adauga</button>
+</form>
+
+@section scripts {
+<script>
+
+    $('#adauga').click(function (e) { 
+        var serviceUrl = 'https://localhost:5001/api/trains/createtrain';
+        var rang = $('input[name="rang"]').val();
+        const data = JSON.stringify(rang);
+        console.log(rang);
+        console.log("banana");
+        var settings = {
+            "url": "https://localhost:5001/api/trains/createtrain",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({ "Rang": data }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(rang);
+        });
+    });
+</script>
+}
+

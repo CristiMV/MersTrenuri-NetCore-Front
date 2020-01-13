@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Statii";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table" id="statii">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nume</th>
+    </tr>
+  </thead>
+  <tbody id="details">
+   
+   
+  </tbody>
+</table>
+
+@section scripts {
+<script>
+
+    var serviceUrl = 'https://localhost:5001/api/stations/getallstations'; 
+        $.ajax({
+          type: 'GET',
+          contentType: "application/json",
+          url: serviceUrl,
+          dataType: 'json',
+          success:function(data){
+              $.each(data, function (index, val) {
+                  $('#details').append('<tr><th>' + val.id + '</th>' + '<th>' + val.name + '</th></tr>');
+
+                  //rang.append(val.rang);
+            })
+          },
+          error:function(data){
+
+              console.log("nu merge");
+          }
+        })
+</script>
+}
+

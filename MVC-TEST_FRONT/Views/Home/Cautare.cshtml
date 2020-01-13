@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Cautare";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table" id="trenuri">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">TrainID</th>
+      <th scope="col">StationID</th>
+      <th scope="col">stationNumber</th>
+      <th scope="col">ArrivalTime</th>
+      <th scope="col">LeftTime</th>
+      <th scope="col">Train</th>
+      <th scope="col">Station</th>
+    </tr>
+  </thead>
+  <tbody id="details">
+   
+   
+  </tbody>
+</table>
+
+@section scripts {
+<script>
+
+    var serviceUrl = 'https://localhost:5001/api/trainstations/getalltrainstations'; 
+        $.ajax({
+          type: 'GET',
+          contentType: "application/json",
+          url: serviceUrl,
+          dataType: 'json',
+          success:function(data){
+              $.each(data, function (index, val) {
+                  $('#details').append('<tr><th>' + val.id + '</th>' + '<th>' + val.trainID + '</th>' + '<th>' + val.stationID + '</th>' + '<th>' + val.stationNumber + '</th>' + '<th>' + val.arrivalTime + '</th>' + '<th>' + val.leftTime + '</th>' + '<th>' + val.train + '</th>' + '<th>' + val.station + '</th></tr>');
+
+                  //rang.append(val.rang);
+            })
+          },
+          error:function(data){
+
+              console.log("nu merge");
+          }
+        })
+</script>
+}
+

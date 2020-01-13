@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>MVC_TEST_FRONT</RootNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\theme\" />
+    <Folder Include="Views\Tren\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\Cautare.cshtml" />
+    <None Remove="Views\Home\Statii.css" />
+  </ItemGroup>
+</Project>

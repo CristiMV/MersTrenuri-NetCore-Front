@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{C9EFB3FB-B221-48BA-80B8-08B8240DFD66}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVC-TEST_FRONT/Views/Tren/Adauga.cshtml">
+    <Files>
+      <File FileName="MVC-TEST_FRONT/Views/Home/Index.cshtml" Line="8" Column="7" />
+      <File FileName="MVC-TEST_FRONT/Views/Home/Statii.css" />
+      <File FileName="MVC-TEST_FRONT/Views/Home/Statii.cshtml" />
+      <File FileName="MVC-TEST_FRONT/Controllers/HomeController.cs" />
+      <File FileName="MVC-TEST_FRONT/Views/Home/Cautare.cshtml" />
+      <File FileName="MVC-TEST_FRONT/Controllers/TrenController.cs" />
+      <File FileName="MVC-TEST_FRONT/Views/Shared/_Layout.cshtml" />
+      <File FileName="MVC-TEST_FRONT/Views/Tren/Adauga.cshtml" Line="24" Column="66" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MVC-TEST_FRONT" expanded="True">
+            <Node name="MVC-TEST_FRONT" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
+                <Node name="Tren" expanded="True">
+                  <Node name="Adauga.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MVC-TEST__FRONT PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

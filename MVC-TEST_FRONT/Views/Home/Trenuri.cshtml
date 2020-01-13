@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Trenuri";
+}
+<h1>@ViewData["Title"]</h1>
+
+<a class="btn btn-primary mb-3" asp-area="" asp-controller="Tren" asp-action="Adauga">Adauga Tren Nou</a>
+
+<table class="table" id="trenuri">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Rang</th>
+    </tr>
+  </thead>
+  <tbody id="details">
+   
+   
+  </tbody>
+</table>
+
+@section scripts {
+<script>
+
+    var serviceUrl = 'https://localhost:5001/api/trains/getalltrains'; 
+        $.ajax({
+          type: 'GET',
+          contentType: "application/json",
+          url: serviceUrl,
+          dataType: 'json',
+          success:function(data){
+              $.each(data, function (index, val) {
+                  $('#details').append('<tr><th>' + val.id + '</th>' + '<th>' + val.rang + '</th></tr>');
+
+                  //rang.append(val.rang);
+            })
+          },
+          error:function(data){
+
+              console.log("nu merge");
+          }
+        })
+</script>
+}
+

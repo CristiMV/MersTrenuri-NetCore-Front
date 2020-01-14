@@ -9,11 +9,11 @@ using MVC_TEST_FRONT.Models;
 
 namespace MVC_TEST_FRONT.Controllers
 {
-    public class TrenController : Controller
+    public class StatieController : Controller
     {
-        private readonly ILogger<TrenController> _logger;
+        private readonly ILogger<StatieController> _logger;
 
-        public TrenController(ILogger<TrenController> logger)
+        public StatieController(ILogger<StatieController> logger)
         {
             _logger = logger;
         }

@@ -12,6 +12,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\lib\theme\" />
     <Folder Include="Views\Tren\" />
+    <Folder Include="Views\Statie\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\Cautare.cshtml" />

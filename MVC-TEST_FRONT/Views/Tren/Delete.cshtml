@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Modifica Tren";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form>
+  <div class="form-group">
+    <label for="rang">ID</label>
+    <input type="text" class="form-control" id="id" name="id" placeholder="Introdu id" required>
+
+    <label for="rang">Rang</label>
+    <input type="text" class="form-control" id="rang" name="rang" placeholder="Introdu rang">
+  </div>
+  <button type="submit" id="adauga" class="btn btn-primary">DELETE</button>
+</form>
+
+@section scripts {
+<script>
+
+    var rang = $('input[name="rang"]').val();
+
+
+    $('#adauga').click(function (e) { 
+        var serviceUrl = 'https://localhost:5001/api/trains/deletetrain/' + id;
+        var rang = $('input[name="rang"]').val();
+        var id = $('input[name="id"]').val();
+
+        const data = JSON.stringify(rang);
+        console.log(rang);
+        console.log("banana");
+        var settings = {
+            "url": "https://localhost:5001/api/trains/deletetrain/" + id,
+            "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({ "Rang": data }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(rang);
+        });
+    });
+</script>
+}
+

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Adauga Statie";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form>
+  <div class="form-group">
+    <label for="nume">Nume</label>
+    <input type="text" class="form-control" id="nume" name="nume" placeholder="Introdu nume">
+  </div>
+  <button type="submit" id="adauga" class="btn btn-primary">Adauga</button>
+</form>
+
+@section scripts {
+<script>
+
+    $('#adauga').click(function (e) { 
+        var serviceUrl = 'https://localhost:5001/api/stations/createstation';
+        var nume = $('input[name="nume"]').val();
+        const data = JSON.stringify(nume);
+        console.log(nume)
+        console.log("banana");
+        var settings = {
+            "url": "https://localhost:5001/api/stations/createstation",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({ "name": data }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(nume);
+        });
+    });
+</script>
+}
+

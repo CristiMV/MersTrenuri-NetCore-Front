@@ -74,3 +74,8 @@
 /Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/MVC-TEST_FRONT.dll
 /Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/MVC-TEST_FRONT.pdb
 /Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/MVC-TEST_FRONT.csproj.CopyComplete
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Tren/Edit.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Tren/Delete.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Statie/Adauga.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Statie/Edit.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Statie/Delete.cshtml.g.cs

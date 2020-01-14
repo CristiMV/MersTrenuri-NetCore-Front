@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Modifica Tren";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form>
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" class="form-control" id="id" name="id" placeholder="Introdu id" required>
+
+    <label for="TrainID">TrainID</label>
+    <input type="text" class="form-control" id="TrainID" name="TrainID" placeholder="Introdu ID-ul trenului">
+
+    <label for="StationID">StationID</label>
+    <input type="text" class="form-control" id="StationID" name="StationID" placeholder="Introdu ID-ul statiei">
+  </div>
+  <button type="submit" id="adauga" class="btn btn-primary">DELETE</button>
+</form>
+
+@section scripts {
+<script>
+
+
+
+    $('#adauga').click(function (e) { 
+        var serviceUrl = 'https://localhost:5001/api/trainstations/deletetrainstation/' + id;;
+        var id = $('input[name="id"]').val();
+        var trainId = $('input[name="TrainID"]').val();
+        const data_trainId = JSON.stringify(trainId);
+        var stationId = $('input[name="StationID"]').val();
+        const data_stationId = JSON.stringify(stationId);
+
+        var settings = {
+            "url": "https://localhost:5001/api/trains/deletetrain/" + id,
+            "method": "DELETE",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({ "id": id, "TrainId": trainId, "StationId": stationId }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log("succes");
+        });
+    });
+</script>
+}
+

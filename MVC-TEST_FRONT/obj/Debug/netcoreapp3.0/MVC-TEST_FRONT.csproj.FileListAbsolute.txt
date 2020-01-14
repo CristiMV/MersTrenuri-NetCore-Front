@@ -79,3 +79,6 @@
 /Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Statie/Adauga.cshtml.g.cs
 /Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Statie/Edit.cshtml.g.cs
 /Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/Statie/Delete.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/TrenStatie/Adauga.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/TrenStatie/Delete.cshtml.g.cs
+/Users/tomarares/Developer/MersTrenuri-NetCore-Front/MVC-TEST_FRONT/obj/Debug/netcoreapp3.0/Razor/Views/TrenStatie/Edit.cshtml.g.cs

@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Modifica Statie Tren";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form>
+  <div class="form-group">
+    <label for="TrainID">TrainID</label>
+    <input type="text" class="form-control" id="TrainID" name="TrainID" placeholder="Introdu ID-ul trenului">
+
+    <label for="StationID">StationID</label>
+    <input type="text" class="form-control" id="StationID" name="StationID" placeholder="Introdu ID-ul statiei">
+
+    <label for="stationNumber">stationNumber</label>
+    <input type="number" class="form-control" id="stationNumber" name="stationNumber" placeholder="Introdu stationNumber">
+
+    <label for="ArrivalTime">ArrivalTime</label>
+    <input type="text" class="form-control" id="ArrivalTime" name="ArrivalTime" placeholder="Format:2019-07-26T00:00:00">
+
+    <label for="LeftTime">LeftTime</label>
+    <input type="text" class="form-control" id="LeftTime" name="LeftTime" placeholder="Format:2019-07-26T00:00:00">
+  </div>
+  <button type="submit" id="adauga" class="btn btn-primary">Edit</button>
+</form>
+
+@section scripts {
+<script>
+
+    var rang = $('input[name="rang"]').val();
+
+
+    $('#adauga').click(function (e) { 
+        var serviceUrl = 'https://localhost:5001/api/trainstations/updatetrainstation/' + id;
+        var trainId = $('input[name="TrainID"]').val();
+        const data_trainId = JSON.stringify(trainId);
+        var stationId = $('input[name="StationID"]').val();
+        const data_stationId = JSON.stringify(stationId);
+        var stationNumber = $('input[name="stationNumber"]').value;
+        const data_stationNumber = JSON.stringify(stationNumber);
+
+        var arrivalTime = $('input[name="ArrivalTime"]').val();
+
+        var leftTime = $('input[name="LeftTime"]').val();
+        var settings = {
+            "url": "https://localhost:5001/api/trainstations/updatetrainstation/" + id,
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "trainID": data_trainId,
+                "stationID": data_stationId,
+                "stationNumber": stationNumber,
+                "arrivalTime": arrivalTime,
+                "leftTime": leftTime,
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(rang);
+        });
+    });
+</script>
+}
+
